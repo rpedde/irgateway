@@ -1,0 +1,15 @@
+program: program-block EOF
+program-block: statement | program-block statement | { program-block }
+statement: expression | "if" "(" expression ")" program-block "else" program-block | "if" expression program-block
+expression: ( expression ) | value | varible arithop lvalue | fcall
+fcall: symbol ( arg-list )
+arg-list: expression | arg-list, expression
+value: variable | lvalue
+variable: symbol
+lvalue: number | string
+string: "<value>"
+number: N[.][N]
+arithop: + | - | * | /
+
+expression = term | (expression) | term arithop term
+term = value | fcall 

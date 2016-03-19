@@ -1,0 +1,38 @@
+if (action == "initialize") {
+   current = "light1"
+   currentsay = "blah"
+}
+
+if (action == "event") {
+   if ((key == "alt-ctrl-1") and (state == "down")) {
+      printf("---- Selected overhead light")
+      current = "Light_hFF_Office_Light"
+      currentsay = "overhead light"
+      say(currentsay)
+   }
+
+   if ((key == "alt-ctrl-2") and (state == "down")) {
+      printf("---- Selected ceiling fan")
+      current = "Fan_hFF_Office"
+      currentsay = "ceiling fan"
+      say(currentsay)
+   }
+
+   if ((key == "up") and (state == "down")) {
+      printf("---- Turned on %s", current)
+      if(openhab(current, "ON")) {
+        say(currentsay + " is on")
+      } else {
+        say("error occurred")
+      }
+   }
+
+   if ((key == "down") and (state == "down")) {
+      printf("---- Turned off %s", current)
+      if(openhab(current, "OFF")) {
+        say(currentsay + " is off")
+      } else {
+        say("error occurred")
+      }
+   }
+}

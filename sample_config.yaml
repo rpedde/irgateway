@@ -1,0 +1,7 @@
+# need either device_match or device_path to choose a device
+device_match: HID 1d57:ad02
+rules: sample.rules
+exclusive: True
+openhab: http://openhab:8888/
+#voice: "en-us+f2"
+voice: "male3"

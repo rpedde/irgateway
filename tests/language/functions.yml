@@ -1,0 +1,7 @@
+setup:
+  fenv:
+    call_test
+
+expectations:
+  fenv:
+    call_test: [1, 2, 3]

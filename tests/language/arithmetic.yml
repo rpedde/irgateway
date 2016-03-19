@@ -1,0 +1,5 @@
+expectations:
+  env:
+    t1: False
+    t2: True
+    t3: True

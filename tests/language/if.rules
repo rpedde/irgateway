@@ -1,0 +1,9 @@
+if (0) test1 = 1
+
+if (1) test2 = 1
+
+x = 1
+if (x) {
+   test3 = 1
+}
+
