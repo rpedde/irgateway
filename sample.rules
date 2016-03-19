@@ -1,6 +1,6 @@
 if (action == "initialize") {
-   current = "light1"
-   currentsay = "blah"
+   current = "Light_hFF_Office_Light"
+   currentsay = "overhead light"
 }
 
 if (action == "event") {
